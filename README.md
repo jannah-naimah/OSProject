@@ -211,8 +211,7 @@ __Permissions: Typically 755 (rwxr-xr-x) for directories.
 Owner: root user and root group__.
 2. What port is the apache web server running. ***(1 mark)*** 
 __Apache is running on port 80 inside the container.__.
-3. What port is open for http protocol on the host machine? ***(1 mark)***
-4. __Port 8080 is open on the host machine.__.
+3. What port is open for http protocol on the host machine? ***(1 mark)*** __Port 8080 is open on the host machine.__.
 
 ## Create SUB Networks
 
