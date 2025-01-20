@@ -173,14 +173,19 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __The file testfile.txt created inside the container is owned by the user root and the group root on the host virtual machine.__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __The file testfile.txt created inside the container is owned by the user root and the group root on the host virtual machine.__
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __After executing the chown command, the ownership of the files in myroot has been changed to the user codespace and the group codespace__.***
+__After executing the chown command, the ownership of the files in myroot has been changed to the user codespace and the group codespace__
+
+__@Izzahunzir ➜ /workspaces/OSProject (main) $ sudo chown -R codespace:codespace /workspaces/OSProject/myroot
+@Izzahunzir ➜ /workspaces/OSProject (main) $ ls -l /workspaces/OSProject/myroot
+total 0
+-rw-rw-rw- 1 codespace codespace 0 Jan 20 07:19 testfile.txt__
 
 ## You are on your own, create your own static webpage
 
@@ -246,8 +251,12 @@ docker exec c1 ping c2
 ```
 ***Questions:***
 
-1. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
-2. What is different from the previous ping in the section above? ***(1 mark)*** __Fill answer here__.
+1. Are you able to ping? Show your output . ***(1 mark)*** __Yes__
+   The output: 64 bytes from 172.20.0.3: seq=279 ttl=64 time=0.093 ms
+               64 bytes from 172.20.0.3: seq=280 ttl=64 time=0.085 ms
+               64 bytes from 172.20.0.3: seq=281 ttl=64 time=0.092 ms
+   
+3. What is different from the previous ping in the section above? ***(1 mark)*** __Before bridging, c1 could not reach c2 due to isolated networks. Bridging through bridgenet enables communication by connecting both networks into a shared bridge__.
 
 ## Intermediate Level (10 marks bonus)
 
