@@ -174,7 +174,12 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 ***Questions:***
 
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __The file testfile.txt created inside the container is owned by the user root and the group root on the host virtual machine.__
-2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
+         Output:   ls -l /workspaces/OSProject/myroot
+                   total 0
+                   -rw-rw-rw- 1 root root 0 Jan 21 02:20 testfile.txt
+
+
+4. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
