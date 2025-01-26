@@ -153,8 +153,9 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** __No, files int he container are not persistent by default because when a container is deleted, the data stored inside it also deleted. Containers are stateless and the file system are isolated so changes made inside the container are lost when the contaier is removed__.
+   
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Yes, we can run multiple instances of debian linux because Docker allows multiple containers from the same image. Each container will be an isolated instance of debian with its own file system and environment__.
 
 ## Running your own container with persistent storage
 
@@ -240,11 +241,24 @@ docker run -itd --net rednet --name c2 busybox sh
 ```
 ***Questions:***
 
-1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
-2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)*** __Fill answer here__.
-3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)*** __Fill answer here__.
-4. What is the network address for the running container c1 and c2? ***(1 mark)*** __Fill answer here__.
-5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
+1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Busybox is Linux distribution that includes a variety of Unix utilities in a single executable file. Often used in Docker containers because its haas small size usually under 1MB and able to run many basic Linux commands. The command switch --name is used to assign a custom name to container. As an example given, --name c1 names the first container "c1" and --name c2 names as second container "c2". This allows us to refer to the container by name rather than by its container ID__.
+
+2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)*** 
+
+__NETWORK ID     NAME      DRIVER    SCOPE
+2e6fdf2dc4f8   bluenet   bridge    local
+8c5b69d976ec   bridge    bridge    local
+41460f658af9   host      host      local
+566b6d0b6c0f   none      null      local
+7011de1d1fa1   rednet    bridge    local__.
+
+3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)*** 
+__"Gateway": "172.18.0.1" (bluenet), "Gateway": "172.19.0.1" (rednet)__.
+
+4. What is the network address for the running container c1 and c2? ***(1 mark)*** __"IPAddress": "172.18.0.2" (c1), "IPAddress": "172.19.0.2" (c2)__.
+
+5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** 
+__Not able to ping since c1 and c2 are on separate network. The Output : ping: bad address 'c2'__.
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
