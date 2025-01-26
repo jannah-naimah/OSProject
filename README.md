@@ -78,7 +78,7 @@ codespace
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
 1. Run the command **pwd** . ***(1 mark)*** __/workspaces/OSProject__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** <br>
 __root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -104,57 +104,58 @@ systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
 messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
 codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin__.
-3. Run the command **df** . ***(1 mark)*** 
-__Filesystem     1K-blocks     Used Available Use% Mounted on
-overlay         32847680 10704748  20448832  35% /
-tmpfs              65536        0     65536   0% /dev
-shm                65536        0     65536   0% /dev/shm
-/dev/root       30298176 25164000   5117792  84% /vscode
-/dev/loop4      32847680 10704748  20448832  35% /workspaces
-/dev/sda1       46127956 12062860  31689520  28% /tmp__.
-4. Run the command **du** . ***(1 mark)*** 
-__8       ./.git/refs/heads
-4       ./.git/refs/tags
-8       ./.git/refs/remotes/origin
-12      ./.git/refs/remotes
-28      ./.git/refs
-68      ./.git/hooks
-8       ./.git/info
-4       ./.git/lfs/tmp
-8       ./.git/lfs
-4       ./.git/branches
-4       ./.git/objects/info
-1876    ./.git/objects/pack
-1884    ./.git/objects
-8       ./.git/logs/refs/heads
-8       ./.git/logs/refs/remotes/origin
-12      ./.git/logs/refs/remotes
-24      ./.git/logs/refs
-32      ./.git/logs
-2060    ./.git
-1972    ./images
+3. Run the command **df** . ***(1 mark)*** <br>
+__Filesystem     1K-blocks     Used Available Use% Mounted on <br>
+overlay         32847680 10704748  20448832  35% / <br>
+tmpfs              65536        0     65536   0% /dev <br>
+shm                65536        0     65536   0% /dev/shm <br>
+/dev/root       30298176 25164000   5117792  84% /vscode <br>
+/dev/loop4      32847680 10704748  20448832  35% /workspaces <br>
+/dev/sda1       46127956 12062860  31689520  28% /tmp__. <br>
+4. Run the command **du** . ***(1 mark)*** <br>
+__8       ./.git/refs/heads <br>
+4       ./.git/refs/tags <br>
+8       ./.git/refs/remotes/origin <br>
+12      ./.git/refs/remotes <br>
+28      ./.git/refs <br>
+68      ./.git/hooks <br>
+8       ./.git/info <br>
+4       ./.git/lfs/tmp <br>
+8       ./.git/lfs <br>
+4       ./.git/branches <br>
+4       ./.git/objects/info <br>
+1876    ./.git/objects/pack <br>
+1884    ./.git/objects <br>
+8       ./.git/logs/refs/heads <br>
+8       ./.git/logs/refs/remotes/origin <br>
+12      ./.git/logs/refs/remotes <br>
+24      ./.git/logs/refs <br>
+32      ./.git/logs <br>
+2060    ./.git <br>
+1972    ./images <br>
 4056    .__.
 5. Run the command **ls** . ***(1 mark)*** __README.md  images__.
-6. Run the command **ls -asl** . ***(1 mark)*** 
-__total 36
- 4 drwxrwxrwx+ 4 codespace root  4096 Jan 24 15:23 .
- 4 drwxr-xrwx+ 5 codespace root  4096 Jan 24 15:24 ..
- 4 drwxrwxrwx+ 9 codespace root  4096 Jan 26 05:10 .git
-20 -rw-rw-rw-  1 codespace root 19127 Jan 24 15:23 README.md
- 4 drwxrwxrwx+ 2 codespace root  4096 Jan 24 15:23 images__.
-7. Run the command **free -h** . ***(1 mark)*** 
-__              total        used        free      shared  buff/cache   available
-Mem:          7.7Gi       1.2Gi       168Mi        59Mi       6.4Gi       6.2Gi
+6. Run the command **ls -asl** . ***(1 mark)***  <br>
+__total 36 <br>
+ 4 drwxrwxrwx+ 4 codespace root  4096 Jan 24 15:23 . <br>
+ 4 drwxr-xrwx+ 5 codespace root  4096 Jan 24 15:24 .. <br>
+ 4 drwxrwxrwx+ 9 codespace root  4096 Jan 26 05:10 .git <br>
+20 -rw-rw-rw-  1 codespace root 19127 Jan 24 15:23 README.md <br>
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jan 24 15:23 images__. <br>
+7. Run the command **free -h** . ***(1 mark)*** <br>
+__              total        used        free      shared  buff/cache   available <br>
+Mem:          7.7Gi       1.2Gi       168Mi        59Mi       6.4Gi       6.2Gi <br>
 Swap:            0B          0B          0B__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __processor       : 0
-vendor_id       : AuthenticAMD
-cpu family      : 25
-model           : 1
-model name      : AMD EPYC 7763 64-Core Processor
-stepping        : 1
-microcode       : 0xffffffff
-cpu MHz         : 3243.729
-cache size      : 512 KB
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** <br>
+__processor       : 0 <br>
+vendor_id       : AuthenticAMD <br>
+cpu family      : 25 <br>
+model           : 1 <br>
+model name      : AMD EPYC 7763 64-Core Processor <br>
+stepping        : 1 <br>
+microcode       : 0xffffffff <br>
+cpu MHz         : 3243.729 <br>
+cache size      : 512 KB <br>
 physical id     : 0
 siblings        : 2
 core id         : 0
@@ -205,15 +206,15 @@ power management:__.
 __    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                           
     629 codespa+  20   0   41.5g 306008  50944 S   0.7   3.8   0:09.54 node                                              
     608 codespa+  20   0   11.3g 101856  47616 S   0.3   1.3   0:03.63 node __.
-10. Run the command **uname -a**. ***(1 mark)*** __Linux codespaces-1d4fbb 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__.
-11. What is the available free memory in the system. ***(1 mark)*** __6.2 GiB__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __20,448,832 KB (~20.45 GiB)__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Version: 6.5.0-1025-azure
+10. Run the command **uname -a**. ***(1 mark)*** __Linux codespaces-1d4fbb 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__. <br>
+11. What is the available free memory in the system. ***(1 mark)*** __6.2 GiB__. <br>
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** __20,448,832 KB (~20.45 GiB)__. <br>
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** <br> __Version: 6.5.0-1025-azure <br>
 Hardware architecture: x86_64__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __ls: Lists the files and directories in the current directory.
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** <br> __ls: Lists the files and directories in the current directory. <br>
 ls -asl: Provides a detailed view of files and directories, including permissions, number of links, owner, group, size, and modification date.__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __2560 4K pages__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __3243.729 MHz (or ~3.24 GHz)__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __2560 4K pages__. <br>
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __3243.729 MHz (or ~3.24 GHz)__. <br>
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __node with PID 629__.
 
 ## Running your own container instance.
