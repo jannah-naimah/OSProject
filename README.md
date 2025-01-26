@@ -77,23 +77,144 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __Fill answer here__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
-3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
-4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
-5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
-6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
-7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+1. Run the command **pwd** . ***(1 mark)*** __/workspaces/OSProject__.
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+__root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
+codespace:x:1000:1000::/home/codespace:/bin/bash
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin__.
+3. Run the command **df** . ***(1 mark)*** 
+__Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 10704748  20448832  35% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/root       30298176 25164000   5117792  84% /vscode
+/dev/loop4      32847680 10704748  20448832  35% /workspaces
+/dev/sda1       46127956 12062860  31689520  28% /tmp__.
+4. Run the command **du** . ***(1 mark)*** 
+__8       ./.git/refs/heads
+4       ./.git/refs/tags
+8       ./.git/refs/remotes/origin
+12      ./.git/refs/remotes
+28      ./.git/refs
+68      ./.git/hooks
+8       ./.git/info
+4       ./.git/lfs/tmp
+8       ./.git/lfs
+4       ./.git/branches
+4       ./.git/objects/info
+1876    ./.git/objects/pack
+1884    ./.git/objects
+8       ./.git/logs/refs/heads
+8       ./.git/logs/refs/remotes/origin
+12      ./.git/logs/refs/remotes
+24      ./.git/logs/refs
+32      ./.git/logs
+2060    ./.git
+1972    ./images
+4056    .__.
+5. Run the command **ls** . ***(1 mark)*** __README.md  images__.
+6. Run the command **ls -asl** . ***(1 mark)*** 
+__total 36
+ 4 drwxrwxrwx+ 4 codespace root  4096 Jan 24 15:23 .
+ 4 drwxr-xrwx+ 5 codespace root  4096 Jan 24 15:24 ..
+ 4 drwxrwxrwx+ 9 codespace root  4096 Jan 26 05:10 .git
+20 -rw-rw-rw-  1 codespace root 19127 Jan 24 15:23 README.md
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jan 24 15:23 images__.
+7. Run the command **free -h** . ***(1 mark)*** 
+__              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.2Gi       168Mi        59Mi       6.4Gi       6.2Gi
+Swap:            0B          0B          0B__.
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3243.729
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3243.985
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:__.
+9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
+__    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                           
+    629 codespa+  20   0   41.5g 306008  50944 S   0.7   3.8   0:09.54 node                                              
+    608 codespa+  20   0   11.3g 101856  47616 S   0.3   1.3   0:03.63 node __.
+10. Run the command **uname -a**. ***(1 mark)*** __Linux codespaces-1d4fbb 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__.
+11. What is the available free memory in the system. ***(1 mark)*** __6.2 GiB__.
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** __20,448,832 KB (~20.45 GiB)__.
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Version: 6.5.0-1025-azure
+Hardware architecture: x86_64__.
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __ls: Lists the files and directories in the current directory.
+ls -asl: Provides a detailed view of files and directories, including permissions, number of links, owner, group, size, and modification date.__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __2560 4K pages__.
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __3243.729 MHz (or ~3.24 GHz)__.
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __node with PID 629__.
 
 ## Running your own container instance.
 
